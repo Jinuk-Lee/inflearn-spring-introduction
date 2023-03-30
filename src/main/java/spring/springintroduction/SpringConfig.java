@@ -6,8 +6,6 @@ import org.springframework.context.annotation.Configuration;
 import spring.springintroduction.repository.*;
 import spring.springintroduction.service.MemberService;
 
-import javax.persistence.EntityManager;
-
 @Configuration
 public class SpringConfig {
 
@@ -17,7 +15,6 @@ public class SpringConfig {
         this.memberRepository = memberRepository;
 
     }
-
     @Bean
     public MemberService memberService() {
         return new MemberService(memberRepository);
